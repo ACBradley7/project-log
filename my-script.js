@@ -5,8 +5,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     const response = await fetch(dataURL);
     const yamlText = await response.text();
     const data = jsyaml.load(yamlText);
+    createContentFromPosts();
 
-    console.log(document.title);
     console.log(data);
   } catch (err) {
     console.log('Error loading YAML:', err);
@@ -31,4 +31,8 @@ function getDataByTitle() {
   }
 
   return dataURL
+}
+
+function createContentFromPosts() {
+
 }
