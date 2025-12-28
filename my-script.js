@@ -20,10 +20,10 @@ function getDataByTitle() {
       dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts/project-log-posts.yml';
       break;
     case 'Future Projects':
-      dataURL = 'https://github.com/ACBradley7/project-log/blob/main/posts/future-projects-posts.yml';
+      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts/future-projects-posts.yml';
       break;
     case 'About Me':
-      dataURL = 'https://github.com/ACBradley7/project-log/blob/main/posts/about-me-posts.yml';
+      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts/about-me-posts.yml';
       break;
   }
 
