@@ -21,10 +21,10 @@ function getDataByTitle() {
       dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/project-log-posts.yml';
       break;
     case 'Future Projects':
-      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/project-log-posts.yml';
+      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/future-projects-posts.yml';
       break;
     case 'About Me':
-      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/project-log-posts.yml';
+      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/about-me-posts.yml';
       break;
     default:
       dataURL = null;
