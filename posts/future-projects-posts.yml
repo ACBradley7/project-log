@@ -1,12 +1,13 @@
 posts:
-  "post-1":
+  post-1:
     id: 1
     title: "Future Projects"
     type: null
     start-date: "28 Dec 2025"
     end-date: null
     text: null
-    unordered-list:
-      - "Infinite music generator with Markov Chains"
-      - "TUI UI library"
-      - "3D Collectathon"
+    content:
+      - unordered-list:
+        - "Infinite music generator with Markov Chains"
+        - "TUI UI library"
+        - "3D Collectathon"
