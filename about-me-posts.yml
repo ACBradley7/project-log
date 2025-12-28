@@ -1,0 +1,16 @@
+posts:
+  "post-2":
+    id: 2
+    title: "About me"
+    type: null
+    start-date: "28 Dec 2025"
+    end-date: null
+    text: "Hey everyone, my name is Drew Bradley. I am a hobbist programmer and am attempting to make a career change into the field of software development by going back to school."
+  "post-1":
+    id: 1
+    title: "Why does this exist?"
+    type: null
+    start-date: "28 Dec 2025"
+    end-date: null
+    text: "This website exists to hold myself accountable to finishing what I start. Like many prgrammers, I find it very easy to jump from project to project without actually completing any of them. By publicly displaying what I hope to accomplish, my goal is that I will better be able to stick to personal projects that I set for myself."
+
