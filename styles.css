@@ -1,0 +1,49 @@
+body {
+  margin: 0 0 0 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h4 {
+  font-style: italic;
+}
+
+h5 {
+  font-style: italic;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+a:active {
+  opacity: 0.2;
+}
+
+.post {
+  width: 80vw;
+  border-top: solid black 0.1vw;
+  border-bottom: solid black 0.1vw;
+  padding: 2vw;
+  margin-bottom: 5vw;
+  background-color: #FAF9F6;
+}
