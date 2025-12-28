@@ -33,7 +33,7 @@ function getDataByTitle() {
 function createContentFromPosts(postsData) {
   let mainElt = document.querySelector('main');
 
-  for (i = Object.keys(postsData).length; i >= 1; i--) {
+  for (i = 1; i <= Object.keys(postsData).length; i++) {
     console.log(postsData["posts"][`post-${i}`]);
     let postData = postsData["posts"][`post-${i}`];
 
