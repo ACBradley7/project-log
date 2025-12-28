@@ -1,6 +1,6 @@
 posts:
   post-1:
-    id: 1
+    id: null
     title: "Future Projects"
     type: null
     start-date: "28 Dec 2025"

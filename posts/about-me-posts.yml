@@ -1,6 +1,6 @@
 posts:
   post-2:
-    id: 2
+    id: null
     title: "About me"
     type: null
     start-date: "28 Dec 2025"
@@ -8,7 +8,7 @@ posts:
     content:
       - paragraph: "Hey everyone, my name is Drew Bradley. I am a hobbist programmer and am attempting to make a career change into the field of software development by going back to school."
   post-1:
-    id: 1
+    id: null
     title: "Why does this exist?"
     type: null
     start-date: "28 Dec 2025"

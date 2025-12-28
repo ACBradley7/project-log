@@ -53,11 +53,15 @@ function createPostDiv(mainElt) {
 }
 
 function createPostTitle(div, id, postTitle) {
+  let titleElt = document.createElement('h3');
+
   if (id && postTitle) {
-    let titleElt = document.createElement('h3');
-    titleElt.textContent = `Post: #${id}: ${postTitle}`;
-    div.appendChild(titleElt);
+    titleElt.textContent = `Post #${id}: ${postTitle}`;
+  } else {
+    titleElt.textContent = postTitle;
   }
+
+  div.appendChild(titleElt);
 }
 
 function createPostType(div, postType) {
