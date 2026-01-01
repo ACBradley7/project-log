@@ -9,7 +9,7 @@ posts:
     content:
       - unordered-list:
         - "Basics of Assembly language"
-        - "Balance - An educational game about keeping equations true"
+        - "Balance - An educational game about keeping equations true (maybe different colored objects can be grabbed and moved from side to side.. or something)"
   post-1:
     id: null
     title: "Future Projects"
