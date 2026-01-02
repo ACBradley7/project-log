@@ -1,11 +1,13 @@
 window.addEventListener('DOMContentLoaded', async () => {
-  dataURL = getDataByTitle()
+  // dataURL = getDataByTitle()
+  dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts.yml'
 
   try {
-    const response = await fetch(dataURL);
-    const yamlText = await response.text();
-    const postsData = jsyaml.load(yamlText);
-    createContentFromPosts(postsData);
+    // const response = await fetch(dataURL);
+    // const yamlText = await response.text();
+    // const postsData = jsyaml.load(yamlText);
+    createContentFromYaml(postsData);
+    // createContentFromPosts(postsData);
   } catch (err) {
     console.log('Error loading YAML:', err);
   }
@@ -13,7 +15,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 function getDataByTitle() {
   let title = document.title;
-  let dataURL = "";
+  let dataURL = '';
 
   switch (title) {
     case 'Project Log':
@@ -30,12 +32,45 @@ function getDataByTitle() {
   return dataURL
 }
 
+function createContentFromYaml(postsData) {
+  let mainElt = document.querySelector('main');
+  let postsDivsArr = []
+
+  for (i = 0; i < Object.keys(postsData['posts']).length; i++) {
+    // console.log(postsData['posts'][`post-${i}`]);
+    let postData = postsData['posts'][`post-${i}`];
+    postsDivsArr.append(createBlock(postData));
+  }
+
+  for (i = postsDivsArr.length; i >= 1; i --) {
+    let postDiv = postsDivsArr[i];
+    mainElt.appendChild(postDiv);
+  }
+}
+
+function createBlock(mainElt, postData) {
+    let postDiv = createPostDivNew();
+
+    createPostTitle(postDiv, postData['id'], postData['title']);
+    createPostType(postDiv, postData['type']);
+    createPostDate(postDiv, postData['start-date'], postData['end-date']);
+    createPostContent(postDiv, postData['content']);
+
+    return postDiv;
+}
+
+function createPostDivNew() {
+  let postDiv = document.createElement('div');
+  postDiv.setAttribute('class', 'post');
+  return postDiv;
+}
+
 function createContentFromPosts(postsData) {
   let mainElt = document.querySelector('main');
 
-  for (i = Object.keys(postsData["posts"]).length; i >= 1; i--) {
-    // console.log(postsData["posts"][`post-${i}`]);
-    let postData = postsData["posts"][`post-${i}`];
+  for (i = Object.keys(postsData['posts']).length; i >= 1; i--) {
+    // console.log(postsData['posts'][`post-${i}`]);
+    let postData = postsData['posts'][`post-${i}`];
 
     let postDiv = createPostDiv(mainElt);
     createPostTitle(postDiv, postData['id'], postData['title']);
@@ -102,12 +137,12 @@ function createPostContent(div, postContent) {
 }
 
 function createContentFromType(div, type, items) {
-  if (type == "paragraph") {
+  if (type == 'paragraph') {
     createParagraph(div, items);
-  } else if (type == "ordered-list") {
-    createList(div, items, "ol");
-  } else if (type == "unordered-list") {
-    createList(div, items, "ul");
+  } else if (type == 'ordered-list') {
+    createList(div, items, 'ol');
+  } else if (type == 'unordered-list') {
+    createList(div, items, 'ul');
   }
 }
 
