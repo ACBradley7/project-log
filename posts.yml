@@ -8,7 +8,7 @@ posts:
     end-date: null
     content:
       - unordered-list:
-        - "2D souls-like rogue-like with large variation in environments enemies and bosses that are mixed together each run."
+        - "2D souls-like rogue-like with large variation in environments, enemies, and bosses that are mixed together each run."
   post-6:
     page: "Future projects"
     thread: "Future projects"
