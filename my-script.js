@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', async () => {
-  // dataURL = getDataByTitle()
   dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts.yml'
 
   try {
