@@ -1,4 +1,15 @@
 posts:
+  post-6:
+    page: "Future projects"
+    thread: "Future projects"
+    num-spot: "AFTER"
+    type: null
+    start-date: "02 Jan 2026"
+    end-date: null
+    content:
+      - unordered-list:
+        - "TUI presentation program (Presentui)"
+        - "TUI node drawing program (dnode?)"
   post-5:
     page: "About me"
     thread: "About me"
@@ -17,7 +28,6 @@ posts:
     end-date: null
     content:
       - paragraph: "This website exists to hold myself accountable to finishing what I start. Like many prgrammers, I find it very easy to jump from project to project without actually completing any of them. The end goal of publicly displaying what I hope to accomplish is to provide a sense of accountability for myself thereby motivating me to actually stick to my personal projects."
-
   post-3:
     page: "Future projects"
     thread: "Future projects"
