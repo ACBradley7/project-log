@@ -42,7 +42,7 @@ posts:
     content:
       - unordered-list:
         - "Basics of Assembly language"
-        - "Balance - An educational game about keeping equations true (maybe different colored objects can be grabbed and moved from side to side.. or something)"
+        - "Balance - An educational game about keeping equations true (maybe different colored objects can be grabbed, moved around, and combined)"
   post-2:
     page: "Future projects"
     thread: "Future projects"
