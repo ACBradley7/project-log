@@ -1,7 +1,8 @@
 posts:
   post-5:
     page: "About me"
-    title: "About me"
+    thread: "About me"
+    num-spot: null
     type: null
     start-date: "28 Dec 2025"
     end-date: null
@@ -9,7 +10,8 @@ posts:
       - paragraph: "Hey everyone, my name is Drew Bradley. I am a hobbist programmer and am attempting to make a career change into the field of software development by going back to school."
   post-4:
     page: "About me"
-    title: "Why does this exist?"
+    thread: "Why does this exist?"
+    num-spot: null
     type: null
     start-date: "28 Dec 2025"
     end-date: null
@@ -18,7 +20,8 @@ posts:
 
   post-3:
     page: "Future projects"
-    title: "Future projects"
+    thread: "Future projects"
+    num-spot: "AFTER"
     type: null
     start-date: "01 Jan 2026"
     end-date: null
@@ -28,7 +31,8 @@ posts:
         - "Balance - An educational game about keeping equations true (maybe different colored objects can be grabbed and moved from side to side.. or something)"
   post-2:
     page: "Future projects"
-    title: "Future projects"
+    thread: "Future projects"
+    num-spot: "AFTER"
     type: null
     start-date: "28 Dec 2025"
     end-date: null
@@ -39,7 +43,8 @@ posts:
         - "3D Collectathon"
   post-1:
     page: "Project log"
-    title: "3D Renderer"
+    thread: "3D Renderer"
+    num-spot: "BEFORE"
     type: "New project"
     start-date: "28 Dec 2025"
     end-date: null
