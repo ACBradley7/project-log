@@ -44,7 +44,7 @@ posts:
   post-1:
     page: "Project log"
     thread: "3D Renderer"
-    num-spot: "BEFORE"
+    num-spot: "AFTER"
     type: "New project"
     start-date: "28 Dec 2025"
     end-date: null

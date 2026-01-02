@@ -1,104 +1,93 @@
 window.addEventListener('DOMContentLoaded', async () => {
-  dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts.yml'
+  let pageTitle = document.title;
+  let dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts.yml';
 
   try {
-    // const response = await fetch(dataURL);
-    // const yamlText = await response.text();
-    // const postsData = jsyaml.load(yamlText);
-    createContentFromYaml(postsData);
-    // createContentFromPosts(postsData);
+    const response = await fetch(dataURL);
+    const yamlText = await response.text();
+    const postsData = jsyaml.load(yamlText);
+    createContentFromYaml(pageTitle, postsData);
   } catch (err) {
     console.log('Error loading YAML:', err);
   }
 });
 
-function getDataByTitle() {
-  let title = document.title;
-  let dataURL = '';
-
-  switch (title) {
-    case 'Project Log':
-      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts/project-log-posts.yml';
-      break;
-    case 'Future Projects':
-      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts/future-projects-posts.yml';
-      break;
-    case 'About Me':
-      dataURL = 'https://raw.githubusercontent.com/ACBradley7/project-log/refs/heads/main/posts/about-me-posts.yml';
-      break;
-  }
-
-  return dataURL
-}
-
-function createContentFromYaml(postsData) {
+function createContentFromYaml(pageTitle, postsData) {
   let mainElt = document.querySelector('main');
-  let postsDivsArr = []
+  let postsBlocksArr = [];
+  let postNumByThread = {};
 
-  for (i = 0; i < Object.keys(postsData['posts']).length; i++) {
-    // console.log(postsData['posts'][`post-${i}`]);
+  let postsKeys = Object.keys(postsData['posts']);
+  for (i = 1; i <= postsKeys.length; i++) {
     let postData = postsData['posts'][`post-${i}`];
-    postsDivsArr.append(createBlock(postData));
+    postNum = populatePostNumByThread(postNumByThread, postData);
+
+    if (pageTitle == postData['page']) {
+      let block = createBlock(pageTitle, postNum, postData);
+      postsBlocksArr.push(block);
+    }
   }
 
-  for (i = postsDivsArr.length; i >= 1; i --) {
-    let postDiv = postsDivsArr[i];
+  for (i = postsBlocksArr.length - 1; i >= 0; i --) {
+    let postDiv = postsBlocksArr[i];
     mainElt.appendChild(postDiv);
   }
 }
 
-function createBlock(mainElt, postData) {
-    let postDiv = createPostDivNew();
+function populatePostNumByThread(obj, postData) {
+  let thread = postData['thread'];
 
-    createPostTitle(postDiv, postData['id'], postData['title']);
-    createPostType(postDiv, postData['type']);
-    createPostDate(postDiv, postData['start-date'], postData['end-date']);
-    createPostContent(postDiv, postData['content']);
-
-    return postDiv;
-}
-
-function createPostDivNew() {
-  let postDiv = document.createElement('div');
-  postDiv.setAttribute('class', 'post');
-  return postDiv;
-}
-
-function createContentFromPosts(postsData) {
-  let mainElt = document.querySelector('main');
-
-  for (i = Object.keys(postsData['posts']).length; i >= 1; i--) {
-    // console.log(postsData['posts'][`post-${i}`]);
-    let postData = postsData['posts'][`post-${i}`];
-
-    let postDiv = createPostDiv(mainElt);
-    createPostTitle(postDiv, postData['id'], postData['title']);
-    createPostType(postDiv, postData['type']);
-    createPostDate(postDiv, postData['start-date'], postData['end-date']);
-    createPostContent(postDiv, postData['content']);
+  if (thread in obj) {
+    obj[thread] += 1;
   }
+  else {
+    obj[thread] = 1;
+  }
+
+  return obj[thread];
 }
 
-function createPostDiv(mainElt) {
-  let postDiv = document.createElement('div');
-  postDiv.setAttribute('class', 'post');
-  mainElt.appendChild(postDiv);
+function createBlock(pageTitle, postNum, postData) {
+  let postDiv = createPostDiv();
+
+  createPostTitle(postDiv, postNum, postData);
+  createPostType(postDiv, postData);
+  createPostDate(postDiv, postData);
+  createPostContent(postDiv, postData);
+
   return postDiv;
 }
 
-function createPostTitle(div, id, postTitle) {
-  let titleElt = document.createElement('h3');
+function createPostDiv() {
+  let postDiv = document.createElement('div');
+  postDiv.setAttribute('class', 'post');
+  return postDiv;
+}
 
-  if (id && postTitle) {
-    titleElt.textContent = `Post #${id}: ${postTitle}`;
-  } else {
-    titleElt.textContent = postTitle;
+function createPostTitle(div, num, postData) {
+  let titleElt = document.createElement('h3');
+  let postThread = postData['thread'];
+  let numSpot = postData['num-spot'];
+  console.log(postData, num);
+
+  switch (numSpot) {
+    case "BEFORE":
+      titleElt.textContent = `Post #${num}: ${postThread}`;
+      break;
+    case "AFTER":
+      titleElt.textContent = `${postThread} #${num}`;
+      break;
+    default:
+      titleElt.textContent = postThread;
+      break;
   }
 
   div.appendChild(titleElt);
 }
 
-function createPostType(div, postType) {
+function createPostType(div, postData) {
+  let postType = postData['type'];
+
   if (postType) {
     let typeElt = document.createElement('h4');
     typeElt.textContent = `Type: ${postType}`;
@@ -106,25 +95,29 @@ function createPostType(div, postType) {
   }
 }
 
-function createPostDate(div, postStartDate, postEndDate) {
+function createPostDate(div, postData) {
   let dateElt = null;
+  let startDate = postData['start-date'];
+  let endDate = postData['end-date'];
 
-  if (postStartDate) {
+  if (startDate) {
     dateElt = document.createElement('h5');
-    dateElt.textContent = postStartDate;
+    dateElt.textContent = startDate;
   }
 
-  if (postStartDate && postEndDate) {
-    dateElt.textContent = `${postStartDate} - ${postEndDate}`;
+  if (startDate && endDate) {
+    dateElt.textContent = `${startDate} - ${endDate}`;
     dateElt.setAttribute('id', 'date-elt');
   }
 
-  if (postStartDate) {
+  if (startDate) {
     div.appendChild(dateElt);
   }
 }
 
-function createPostContent(div, postContent) {
+function createPostContent(div, postData) {
+  let postContent = postData['content'];
+
   if (postContent) {
     for (let i = 0; i < postContent.length; i++) {
       key = Object.keys(postContent[i])[0];
