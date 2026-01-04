@@ -3,17 +3,17 @@ posts:
     page: "Project log"
     thread: "3D Renderer"
     num-spot: "AFTER"
-    type: "Project Update"
+    type: "Project update"
     start-date: "04 Jan 2026"
     end-date: null
     content:
-      - paragraph: "Alrighty, so what did I accomplish this week? I had this week off of my current job so I was able to focus on coding and learning more than usual (however I did spend a good amount of time on my degree as well).."
+      - paragraph: "Alrighty, so what did I accomplish this week? I had this week off of my current job so I was able to focus on coding and learning more than usual (however I did spend a good amount of time on my degree as well)..."
       - unordered-list:
-        - "Finished reading through 'The C Programming Language' and completed a handful of exercises from the book. Very good. Very interesting. I still have so much to learn about C."
+        - "Finished reading through 'The C Programming Language' and completed a handful of exercises from the book. Very good. Very interesting. I still have much to learn about C."
         - "Attempted to apply C in various ways like writing a program to do Gaussian elimination and writing a program to handle vector operations. Pointers remain challenging."
-        - "Began my self-study of linear algebra through Heffron's course. Completed the first two chapters or so with associated practice problems."
+        - "Began self-study of linear algebra through Heffron's course. Completed the first two chapters or so with associated practice problems."
         - "Learned the basics of assembly language. (A worthwhile distraction)"
-        - "Gained a greater foundational understanding of computer architecture - e.g. how the machine code compiled by a program works at the physical level of the program being fetched by the CPU, the role of the ALU and other registers, how instructions are executed, what this means electronically for transitors and the implication on logic gates, and how input/output data is stored in dedicated chunks of memory to be read from.  (A very worthwhile distraction)"
+        - "Gained a greater foundational understanding of computer architecture - e.g. how the machine code compiled by a program works at the physical level of being fetched by the CPU, the role of the ALU and other registers, how instructions are executed, what this means electronically for transitors and the implication on logic gates, and how input/output data is stored in dedicated chunks of memory to be read from.  (A very worthwhile distraction)"
         - "Made a quick visualization of Conway's Game of Life in JavaScript. (An enjoyable distraction)"
   post-8:
     page: "Future projects"
@@ -24,7 +24,7 @@ posts:
     end-date: null
     content:
       - unordered-list:
-        - "Convert Conway's Game of Life into a 3D battle royale format where players begin by standing on cells that are alive, can paint one square per tick, each tick represents one generation in CGOL, the goal is to jump/remain on living cells while making your opponents fall through dead cells. This format might be best served in a mobile format where players can join random rooms."
+        - "Convert Conway's Game of Life into a 3D battle royale format where players begin by standing on cells that are alive, can paint one square per tick, each tick represents one generation in CGOL, the goal is to jump/remain on living cells while making your opponents fall through dead cells. This format might be best served in via mobile where players can join random rooms."
   post-7:
     page: "Future projects"
     thread: "Future projects"
