@@ -1,4 +1,18 @@
 posts:
+  post-10:
+    page: "Future projects"
+    thread: "Future projects"
+    num-spot: "AFTER"
+    type: null
+    start-date: "06 Jan 2026"
+    end-date: null
+    content:
+      - unordered-list:
+        - "Project with threading/optimization"
+        - "Project with networking"
+        - "Write compiler"
+        - "Write operating system"
+        - "Write language"
   post-9:
     page: "Project log"
     thread: "3D Renderer"
