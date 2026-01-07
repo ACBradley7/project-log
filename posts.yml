@@ -10,9 +10,9 @@ posts:
       - unordered-list:
         - "Project with threading/optimization"
         - "Project with networking"
-        - "Write compiler"
-        - "Write operating system"
-        - "Write language"
+        - "A compiler"
+        - "An operating system"
+        - "A language"
   post-9:
     page: "Project log"
     thread: "3D Renderer"
@@ -63,7 +63,7 @@ posts:
         - "2D souls-like rogue-like with large variation in environments, enemies, and bosses that are mixed together each run."
         - "Visualizations of Linear Algebra"
         - "Visualization of Conway's Game of Life  in Javascript"
-        - "Visualization of Conway's Game of Life in TUi"
+        - "Visualization of Conway's Game of Life in TUI"
         - "JRPG like Fire Emblem: Sacred Stones"
   post-5:
     page: "About me"
