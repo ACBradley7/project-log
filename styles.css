@@ -41,9 +41,8 @@ a:active {
 
 .post {
   width: 80vw;
-  border-top: solid black 0.1vw;
-  border-bottom: solid black 0.1vw;
   padding: 2vw;
   margin-bottom: 5vw;
   background-color: #FAF9F6;
+  box-shadow: 0 0 1vw #000000;
 }
