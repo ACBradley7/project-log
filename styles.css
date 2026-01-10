@@ -1,5 +1,6 @@
 body {
   margin: 0 0 0 0;
+  background-color: #FAF9F6;
 }
 
 header {
@@ -44,6 +45,6 @@ a:active {
   width: 80vw;
   padding: 2vw;
   margin-bottom: 5vw;
-  background-color: #FAF9F6;
+  background-color: #FFFFFF;
   box-shadow: 0 0 1vw #000000;
 }
