@@ -18,7 +18,6 @@ function createContentFromYaml(pageTitle, postsData) {
   let postNumByThread = {};
 
   let postsKeys = Object.keys(postsData['posts']);
-  console.log(postsKeys);
   for (i = 1; i <= postsKeys.length; i++) {
     let postData = postsData['posts'][`post-${i}`];
     postNum = populatePostNumByThread(postNumByThread, postData);
@@ -36,7 +35,6 @@ function createContentFromYaml(pageTitle, postsData) {
 }
 
 function populatePostNumByThread(obj, postData) {
-  console.log(postData);
   let thread = postData['thread'];
 
   if (thread in obj) {
