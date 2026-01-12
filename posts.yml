@@ -9,6 +9,7 @@ posts:
     content:
       - unordered-list:
         - "Make a model/visual of the solar system using concepts from 3D graphics."
+        - "Implement 2D lighting system for side-scroller view."
   post-11:
     page: "Project log"
     thread: "3D Renderer"
