@@ -9,7 +9,8 @@ posts:
     content:
       - unordered-list:
         - "Make a model/visual of the solar system using concepts from 3D graphics."
-        - "Implement 2D lighting system for side-scroller (or vertical-scroller) view."
+        - "Implement 2D lighting system for a vertical-scroller (with some side-scrolling)."
+        - "Transform 2D lighting system into a game (Terzah/Terzah Dimah/Terzi/Dimi)."
   post-11:
     page: "Project log"
     thread: "3D Renderer"
