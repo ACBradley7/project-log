@@ -1,4 +1,14 @@
 posts:
+  post-12:
+    page: "Future projects"
+    thread: "Future projects"
+    num-spot: "AFTER"
+    type: null
+    start-date: "12 Jan 2026"
+    end-date: null
+    content:
+      - unordered-list:
+        - "Make a model/visual of the solar system using concepts from 3D graphics."
   post-11:
     page: "Project log"
     thread: "3D Renderer"
