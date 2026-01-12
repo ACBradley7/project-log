@@ -1,18 +1,18 @@
 posts:
   post-11:
-  page: "Project log"
-  thread: "3D Renderer"
-  num-spot: "AFTER"
-  type: "Project update"
-  start-date: "11 Jan 2026"
-  end-date: null
-  content:
-    - paragraph: "Back to work this week, so not quite as much progress was made... I generally need to get back at working in the evenings..."
-    - unordered-list:
-      - "I was unable to continue holding myself off from CGFS so I decided to dive in and learned the basics of raytracing, lighting, and shadowing. At this point, I am mostly following along with his code line for line. I imagine I will have to re-implement this 2-4 more times in order to fully grasp what is going on."
-      - "I generally feel much more comfortable with C and pointers now after a few weeks of feeling pretty confused."
-      - "I realized that my knowledge of linear algebra is probably sufficient for what I need to do with graphical programming. The course by Hefferon was still pretty interesting, but I anticipate slowing down and maybe only learning one section a week or some similar pace."
-      - "\"Finished\" Conway's Game of Life in JS for the web. I could/should still optimize it and maybe add some various additional features."
+    page: "Project log"
+    thread: "3D Renderer"
+    num-spot: "AFTER"
+    type: "Project update"
+    start-date: "11 Jan 2026"
+    end-date: null
+    content:
+      - paragraph: "Back to work this week, so not quite as much progress was made... I generally need to get back at working in the evenings..."
+      - unordered-list:
+        - "I was unable to continue holding myself off from CGFS so I decided to dive in and learned the basics of raytracing, lighting, and shadowing. At this point, I am mostly following along with his code line for line. I imagine I will have to re-implement this 2-4 more times in order to fully grasp what is going on."
+        - "I generally feel much more comfortable with C and pointers now after a few weeks of feeling pretty confused."
+        - "I realized that my knowledge of linear algebra is probably sufficient for what I need to do with graphical programming. The course by Hefferon was still pretty interesting, but I anticipate slowing down and maybe only learning one section a week or some similar pace."
+        - "\"Finished\" Conway's Game of Life in JS for the web. I could/should still optimize it and maybe add some various additional features."
   post-10:
     page: "Future projects"
     thread: "Future projects"

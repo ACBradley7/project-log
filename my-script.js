@@ -18,6 +18,7 @@ function createContentFromYaml(pageTitle, postsData) {
   let postNumByThread = {};
 
   let postsKeys = Object.keys(postsData['posts']);
+  console.log(postsKeys);
   for (i = 1; i <= postsKeys.length; i++) {
     let postData = postsData['posts'][`post-${i}`];
     postNum = populatePostNumByThread(postNumByThread, postData);
@@ -35,6 +36,7 @@ function createContentFromYaml(pageTitle, postsData) {
 }
 
 function populatePostNumByThread(obj, postData) {
+  console.log(postData);
   let thread = postData['thread'];
 
   if (thread in obj) {
@@ -68,7 +70,6 @@ function createPostTitle(div, num, postData) {
   let titleElt = document.createElement('h3');
   let postThread = postData['thread'];
   let numSpot = postData['num-spot'];
-  console.log(postData, num);
 
   switch (numSpot) {
     case "BEFORE":
