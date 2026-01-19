@@ -1,4 +1,27 @@
 posts:
+  post-14:
+    page: "Future projects"
+    thread: "Future projects"
+    num-spot: "AFTER"
+    type: null
+    start-date: "19 Jan 2026"
+    end-date: null
+    content:
+      - unordered-list:
+        - "Zoom, zoom, ball go fast"
+  post-13:
+    page: "Project log"
+    thread: "3D Renderer"
+    num-spot: "AFTER"
+    type: "Project update"
+    start-date: "11 Jan 2026"
+    end-date: "18 Jan 2026"
+    content:
+      - paragraph: "Some updates... A little unsure on what to do for next steps at the moment..."
+      - unordered-list:
+        - "Finished up CGFS raytracing, implemented a v2, attempted to implement a 'performant' version."
+        - "Read through CGFS rasterization, but only implemented the basics. It seems like raytracing is enough for now to further experiement."
+        - "Read through material about shaders."
   post-12:
     page: "Future projects"
     thread: "Future projects"
@@ -62,7 +85,7 @@ posts:
     num-spot: "AFTER"
     type: null
     start-date: "04 Jan 2026"
-    end-date: null
+    end-date: "10 Jan 2026"
     content:
       - unordered-list:
         - "Convert Conway's Game of Life into a 3D battle royale format where players begin by standing on cells that are alive, can paint one square per tick, each tick represents one generation in CGOL, the goal is to jump/remain on living cells while making your opponents fall through dead cells. This format might be best served in via mobile where players can join random rooms."
@@ -127,7 +150,7 @@ posts:
     num-spot: "AFTER"
     type: null
     start-date: "28 Dec 2025"
-    end-date: null
+    end-date: "03 Jan 2026"
     content:
       - unordered-list:
         - "Infinite music generator with Markov Chains"
