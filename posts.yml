@@ -1,4 +1,18 @@
 posts:
+  post-15:
+    page: "Project log"
+    thread: "General"
+    num-spot: "AFTER"
+    type: "Project update"
+    start-date: "19 Jan 2026"
+    end-date: "25 Jan 2026"
+    content:
+      - paragraph: "Still feeling a little lost at the moment... just going to recap all that I did..."
+      - unordered-list:
+        - "Spent some good time wokring on a platformer type game. Still in very, very early stages. But, we can move around (no gravity or jumping yet) and have some basic animations. All built in C on top of SDL2."
+        - "Brushed up on SQL in hopes of taking an exam for my degree but the exam never got finalized by the school."
+        - "Learned the basics of Angular for a web programming class. I hope to stay far, far away from web dev and frameworks in the future."
+        - "Dove back into some assembly as it applies to operating systems. Built out some simple bootloaders."
   post-14:
     page: "Future projects"
     thread: "Future projects"
